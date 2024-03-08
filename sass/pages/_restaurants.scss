@@ -1,0 +1,183 @@
+// SET UP
+@use "../base/typography" as *;
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../pages/home" as *;
+
+// COMPONENTS
+
+header {
+  @include header;
+}
+
+footer {
+  @include footer;
+}
+
+// IN-PAGE LAYOUT
+
+// -- loader
+@keyframes fadeIn-entrees {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  45% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn-plats {
+  0% {
+    opacity: 0;
+  }
+  45% {
+    opacity: 0;
+  }
+  85% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn-desserts {
+  0% {
+    opacity: 0;
+  }
+  45% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.entrees {
+  animation: fadeIn-entrees 1.5s forwards;
+}
+
+.plats {
+  animation: fadeIn-plats 1.5s forwards;
+}
+
+.desserts {
+  animation: fadeIn-desserts 1.5s forwards;
+}
+
+// -- page content
+
+.restaurants-page-illu {
+  width: 100%;
+  height: 275px;
+  position: relative;
+  z-index: -100;
+}
+
+.restaurants-page-wrapper {
+  background-color: $grey;
+  border-radius: 35px;
+  position: relative;
+  top: -50px;
+  padding: 32px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+  max-width: 1200px;
+
+  div:nth-child(1) {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+  }
+
+  .restaurants-menu-block {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    .restaurants-h2 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 4px;
+      .heading-line {
+        width: 40px;
+        height: 3px;
+        background-color: $green-light;
+      }
+    }
+    .restaurants-menu-items {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      > div {
+        display: flex;
+        align-items: center;
+        background: $white;
+        border-radius: 15px;
+        overflow: hidden;
+        position: relative;
+        .slide-in {
+          transform: translateX(69%);
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          gap: 24px;
+          padding: 0px;
+          transition: right 0.3s ease;
+          &:hover {
+            transform: translateX(0px);
+            transition: all 0.3s ease;
+          }
+          &:not(:hover) {
+            transition: all 0.3s ease;
+          }
+        }
+        > div {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 4px;
+          padding: 15px;
+        }
+        .add-item {
+          background-color: $green-light;
+          display: flex;
+          height: 100%;
+          padding: 24px;
+          align-items: center;
+          justify-content: center;
+          align-content: center;
+        }
+
+        .fa-circle-check {
+          font-size: 24px;
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+// ICONS
+
+.fa-heart {
+  @include favorite-icon;
+}
+
+// BUTTON
+
+.button-wrapper {
+  @include flex-center;
+  .button {
+    @include button;
+  }
+}

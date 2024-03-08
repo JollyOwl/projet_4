@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap");
+
+// BREAKPOINTS
+
+$small-screen: 576px;
+$medium-screen: 768px;
+$large-screen: 992px;
+$extra-large-screen: 1200px;
+
+// TYPOGRAPHY
+
+$font-family-Shrikhand: "Shrikhand", cursive;
+
+// COLORS
+
+// -- Neutral
+
+$white: #ffffff;
+$grey: #f6f6f6;
+$grey-medium: #eaeaea;
+$grey-dark: #353535;
+
+// -- Brand colors
+
+$violet: #9356dc;
+$green-light: #99e2d0;
+$green-deep: #008766;
+$gradient: linear-gradient(to top, #9356dc, #ff79da);
+
+// DISPLAY
+
+$padding-section: 24px 16px;

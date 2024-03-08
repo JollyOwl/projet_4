@@ -1,0 +1,180 @@
+// SET UP
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// COMPONENTS
+header {
+  @include header;
+}
+
+footer {
+  @include footer;
+}
+
+// GENERAL LAYOUT
+.page-container-HP {
+  @include flex-center;
+  overflow: hidden;
+  width: 100%;
+}
+
+main {
+  width: 100%;
+}
+
+section {
+  padding: $padding-section;
+  @include flex-center;
+}
+
+// IN-PAGE LAYOUT
+
+// -- loader
+
+@keyframes fadeIn {
+  0% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+  50% {
+    opacity: 0;
+    transform: translateX(0%);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+.loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 6666;
+  @include flex-center;
+  background-color: $white;
+  animation: fadeIn 3s forwards;
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+// -- section-HP-CTA
+
+.section-HP-CTA {
+  background: $grey;
+  text-align: center;
+  @include flex-center;
+  gap: 16px;
+}
+.button {
+  @include button;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 16px;
+}
+
+// -- section-HP-fonctionnement
+
+.section-HP-fonctionnement {
+  @include flex-start;
+  .fonctionnement-wrapper-steps {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .fonctionnement-step {
+    position: relative;
+    .step-icon {
+      position: absolute;
+      top: 20px;
+      left: -10px;
+      z-index: 22;
+    }
+  }
+  .fonctionnement-step-descirption {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 24px 24px 24px 32px;
+    gap: 16px;
+    width: 100%;
+    color: black;
+    background: $grey;
+    border-radius: 16px;
+    @include shadow-light;
+  }
+}
+
+// -- section-HP-restaurants
+
+.section-HP-restaurants {
+  @include flex-start;
+  background: $grey;
+}
+
+.restaurants_wrapper_cards {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+a {
+  width: 100%;
+  img {
+    width: 100%;
+    height: 230px;
+    border-radius: 20px 20px 0px 0px;
+  }
+  article {
+    background: $white;
+    border-radius: 20px;
+    position: relative;
+    .article-infos {
+      padding: 16px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  .badge-nouveau {
+    padding: 8px;
+    background: $green-light;
+    color: $green-deep;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+  }
+}
+
+// ICONS
+
+.fa-1,
+.fa-2,
+.fa-3 {
+  @include icon-step-purple;
+}
+
+.fa-mobile-screen,
+.fa-bars,
+.fa-shop {
+  @include icon-step-grey;
+}
+
+.fa-heart {
+  @include favorite-icon;
+}
+
+.fa-utensils,
+fa-handshake {
+  font-size: 20px;
+}

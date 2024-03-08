@@ -1,0 +1,86 @@
+// SET UP
+@use "../abstracts/variables" as *;
+@use "../base/typography" as *;
+@use "../abstracts/mixins" as *;
+@use "../pages/restaurants" as *;
+
+// IN-PAGE LAYOUT (mobile first)
+
+// -- min 576px
+
+@media (min-width: $small-screen) {
+  .section-HP-fonctionnement .fonctionnement-wrapper-steps {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
+  .fonctionnement-step {
+    width: auto;
+  }
+}
+
+// -- min 768px
+
+@media (min-width: $medium-screen) {
+  .section-HP-fonctionnement .fonctionnement-wrapper-steps {
+    gap: 24px;
+  }
+
+  .restaurants_wrapper_cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 24px;
+    grid-row-gap: 24px;
+  }
+}
+
+// -- min 992px max 1200px
+
+@media (min-width: $large-screen) {
+  .fa-heart {
+    @include favorite-icon;
+    transition: all 300ms ease-out;
+    &:hover {
+      color: $violet;
+      filter: opacity(0.8);
+    }
+  }
+
+  footer {
+    height: 115px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 24px;
+
+    > div {
+      flex-direction: row;
+      gap: 24px;
+    }
+    .footer-legal-and-contact {
+      flex-direction: row;
+      .link-mentions-legales {
+        white-space: nowrap;
+      }
+    }
+  }
+
+  main {
+    @include flex-center;
+  }
+
+  .section-HP-CTA,
+  .section-HP-fonctionnement,
+  .section-HP-restaurants {
+    padding: 32px;
+    gap: 32px;
+    width: 100%;
+    align-items: center;
+  }
+
+  .restaurants_wrapper_cards {
+    max-width: 1200px;
+  }
+}

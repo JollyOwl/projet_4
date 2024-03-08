@@ -1,0 +1,80 @@
+@use "../base/reset" as *;
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap");
+
+/* GENERAL */
+
+body {
+  font-family: "Roboto", "Shrikhand", sans-serif;
+}
+
+p {
+  font-size: 1rem;
+}
+
+header p {
+  font-weight: 500;
+}
+
+/* FOOTER */
+footer a {
+  font-weight: 500;
+}
+
+.link-mentions-legales {
+  font-weight: inherit;
+}
+
+.link-contact {
+  font-weight: inherit;
+}
+
+/* HP */
+
+.page-container-HP h1 h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.page-container-HP h3 {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.section-HP-CTA p {
+  font-weight: 300;
+  font-size: 1.125rem;
+}
+
+.section-HP-fonctionnement p {
+  font-weight: 500;
+}
+
+.section-HP-restaurants p {
+  font-weight: 300;
+}
+
+/* RESTAURANTS PAGE */
+.restaurants-page-container h1 {
+  font-family: "Shrikhand";
+}
+
+.restaurants-page-container h2 {
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 100;
+}
+
+.restaurants-page-container h3 {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.restaurants-page-container p {
+  font-weight: 300;
+}
+
+.restaurants-page-container .price {
+  font-weight: 700;
+  font-size: 1.125rem;
+}
