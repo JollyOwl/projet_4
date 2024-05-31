@@ -18,5 +18,3 @@ https://github.com/JollyOwl/projet_4.git
   - base/ : typography and CSS reset for a consistent CSS foundation.
   - responsive/ : Manages media queries for responsiveness.
   - pages/ : specific CSS styling for different pages
-
-test
