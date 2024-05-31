@@ -19,4 +19,10 @@ https://github.com/JollyOwl/projet_4.git
   - responsive/ : Manages media queries for responsiveness.
   - pages/ : specific CSS styling for different pages
 
-hello
+t
+
+
+
+
+
+
